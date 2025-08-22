@@ -1,0 +1,523 @@
+<!-- STARFIELD BACKGROUND -->
+<div id="starfield"></div>
+
+<style>
+  /* Starfield background (global) */
+  #starfield {
+    position: fixed; /* stays in place across all sections */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: black;
+    overflow: hidden;
+  }
+
+  .star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: moveStars linear infinite;
+  }
+
+  @keyframes moveStars {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(100vh);
+    }
+  }
+ html {
+  scroll-behavior: smooth;
+  }
+
+  /* Hero section styling */
+  #hero {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: transparent;
+  }
+
+  #hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+
+  #hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 10px auto;
+    line-height: 1.6;
+  }
+
+  .cta-buttons a {
+    display: inline-block;
+    margin: 15px 10px 0;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .btn-primary {
+    background: #ffd700;
+    color: #333;
+  }
+
+  .btn-primary:hover {
+    background: #e6c200;
+  }
+
+  .btn-outline {
+    border: 2px solid white;
+    color: white;
+  }
+
+  .btn-outline:hover {
+    background: white;
+    color: black;
+  }
+
+  /* Flagship Projects section */
+  #flagship-projects {
+    background: transparent; /* so stars are visible */
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  #flagship-projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ffd700;
+  }
+  #flagship-projects p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 50px;
+  }
+</style>
+
+<!-- Hero Section -->
+<section id="hero">
+ <img src="sels.jpg" 
+     alt="Your Photo" 
+     style="position:absolute; top:100px; left:250px; width:150px; height:150px; border-radius:50%; border:3px solid white; object-fit:cover; z-index:1000;">
+
+  <h1>Hi there, I'm <span style="color: #ffd700;">Selorm Haligah</span></h1>
+  <p>
+    I’m a <strong>Data Scientist</strong> driven by the challenge of turning data into practical, impactful solutions—one project at a time.  
+    Beyond the numbers, I’m a <strong>creative thinker</strong>, a <strong>team player</strong>, and someone who thrives whether collaborating or working independently.  
+    Outside of work, you’ll find me exploring <strong>movies, video games, and fitness</strong>—passions that fuel my curiosity and problem-solving mindset.  
+  </p>
+  <p>
+    My ambition is simple: leverage data to create value, while continuously learning and adapting to any environment.  
+    I’m open to contributing to <strong>forward-thinking firms</strong> or partnering on exciting <strong>consultancy projects</strong> where innovation meets impact.  
+  </p>
+
+  <div class="cta-buttons">
+    <a href="#flagship-projects" class="btn-primary">View My Work</a>
+    <a href="#contact" class="btn-outline">Let’s Talk</a>
+  </div>
+
+</section>
+
+<!-- Flagship Projects -->
+<section id="flagship-projects">
+  <h2>🚀 Flagship Projects</h2>
+  <p>
+    These are my cornerstone projects that demonstrate advanced technical skills, end-to-end development, and real-world impact.
+  </p>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(350px, 1fr)); gap:30px; max-width:1100px; margin:auto;">
+
+    <!-- House Price Prediction App -->
+    <div style="background:#1a1a1a; padding:30px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.5); text-align:left;">
+      <h3 style="color:#ffd700;">🏠 House Price Prediction App</h3>
+      <p>
+        An end-to-end ML web app that predicts house prices with <strong>simulation features</strong> to test "what-if" scenarios and 
+        <strong>explainability via SHAP</strong>. Deployed on Streamlit Cloud for real-time use. <strong>(NB. Use the test dataset from the source code for batch predictions & the explainability section).</strong> 
+      </p>
+      <p><strong>Tech Stack:</strong> Python, Scikit-learn, SHAP, Streamlit</p>
+      <div style="margin-top:15px;">
+        <a href="https://appapppy-4wxlqsvv4yappmatfkrwgqu.streamlit.app/" target="_blank" style="color:#333; background:#ffd700; padding:10px 18px; border-radius:25px; text-decoration:none; font-weight:bold; margin-right:10px;">🔗 Live Demo</a>
+        <a href="https://github.com/shaligah/House-Price-Prediction-App" target="_blank" style="color:#ffd700; border:2px solid #ffd700; padding:10px 18px; border-radius:25px; text-decoration:none; font-weight:bold;">💻 Source Code</a>
+      </div>
+    </div>
+
+    <!-- AI Explainability App -->
+    <div style="background:#1a1a1a; padding:30px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.5); text-align:left;">
+      <h3 style="color:#ffd700;">🤖 AI Explainability App</h3>
+      <p>
+        A <strong>GPT-4 powered app</strong> that generates natural language summaries of user data, combined with SHAP visualizations 
+        to ensure <strong>AI transparency and interpretability</strong>.  
+      </p>
+      <p><strong>Tech Stack:</strong> Python, OpenAI GPT-4, SHAP, Streamlit</p>
+      <div style="margin-top:15px;">
+        <a href="https://ai-explainability-app.streamlit.app/" target="_blank" style="color:#333; background:#ffd700; padding:10px 18px; border-radius:25px; text-decoration:none; font-weight:bold; margin-right:10px;">🔗 Live Demo</a>
+        <a href="https://github.com/shaligah/AI-Explainability-App" target="_blank" style="color:#ffd700; border:2px solid #ffd700; padding:10px 18px; border-radius:25px; text-decoration:none; font-weight:bold;">💻 Source Code</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="supporting-projects" style="background:#transparent; color:white; padding:80px 20px; text-align:center;">
+  <h2 style="font-size:2.2rem; margin-bottom:40px; color:#ffd700;">📂 Supporting Projects</h2>
+  <p style="max-width:800px; margin:auto; font-size:1.1rem; line-height:1.6; margin-bottom:50px;">
+    Beyond flagship apps, these projects showcase my ability to build robust data pipelines, create interactive dashboards, 
+    scrape and process raw data, and apply NLP techniques for insights.
+  </p>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px; max-width:1100px; margin:auto;">
+
+    <!-- ETL Pipeline Project (Highlight) -->
+    <div style="background:#1a1a1a; padding:25px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.5); text-align:left;">
+      <h3 style="color:#ffd700;">⚙️ ETL Data Pipeline</h3>
+      <p>
+        Designed and implemented an <strong>ETL pipeline</strong> that automates data extraction, transformation, and loading 
+        for analytics-ready datasets. Demonstrates <strong>data engineering</strong> best practices.
+      </p>
+      <p><strong>Tech Stack:</strong> Python, Pandas, SQL, Google Colab</p>
+      <div style="margin-top:15px;">
+        <a href="https://github.com/shaligah/ETL-Pipeline-Data-Warehouse" target="_blank" style="color:#ffd700; border:2px solid #ffd700; padding:8px 15px; border-radius:20px; text-decoration:none; font-weight:bold;">💻 Source Code</a>
+      </div>
+    </div>
+
+    <!-- Power BI Project -->
+<div style="background:#1a1a1a; padding:25px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.5); text-align:left;">
+  <h3 style="color:#ffd700;">📊 Power BI Dashboard</h3>
+  <p>
+    Built an interactive <strong>Power BI dashboard</strong> to visualize business KPIs and track performance trends for stakeholders.  
+    Emphasized <strong>data storytelling</strong> with clean and actionable insights.
+  </p>
+
+  <!-- Video Demo (YouTube Embed) -->
+  <div style="margin:15px 0;">
+    <iframe width="100%" height="200" src="https://www.youtube.com/embed/QCa_Avvf_M8" 
+            title="Power BI Demo" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+  </div>
+
+  <div style="margin-top:15px;">
+    <a href="https://github.com/shaligah/Texas-Police-Data-Analysis" target="_blank" style="color:#ffd700; border:2px solid #ffd700; padding:8px 15px; border-radius:20px; text-decoration:none; font-weight:bold;">📈 View Dashboard</a>
+  </div>
+</div>
+
+
+    <!-- Web Scraping F1 Project -->
+    <div style="background:#1a1a1a; padding:25px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.5); text-align:left;">
+      <h3 style="color:#ffd700;">🏎️ F1 Web Scraping</h3>
+      <p>
+        Developed a <strong>web scraping tool</strong> to collect Formula 1 race and driver statistics. 
+        Structured and cleaned raw data for analysis and visualization.
+      </p>
+      <p><strong>Tech Stack:</strong> Python, BeautifulSoup, Pandas</p>
+      <div style="margin-top:15px;">
+        <a href="https://github.com/shaligah/Webscraping-" target="_blank" style="color:#ffd700; border:2px solid #ffd700; padding:8px 15px; border-radius:20px; text-decoration:none; font-weight:bold;">💻 Source Code</a>
+      </div>
+    </div>
+
+    <!-- Sentiment Analysis Project -->
+    <div style="background:#1a1a1a; padding:25px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.5); text-align:left;">
+      <h3 style="color:#ffd700;">📝 Sentiment Analysis</h3>
+      <p>
+        Conducted <strong>NLP-based sentiment analysis</strong> on airport passenger reviews to identify positive, neutral, 
+        and negative sentiments, improving service insights.
+      </p>
+      <p><strong>Tech Stack:</strong> Python, NLTK, Scikit-learn</p>
+      <div style="margin-top:15px;">
+        <a href="https://github.com/shaligah/Sentiment-Analyser" target="_blank" style="color:#ffd700; border:2px solid #ffd700; padding:8px 15px; border-radius:20px; text-decoration:none; font-weight:bold;">💻 Source Code</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Stars JS -->
+<script>
+  const starfield = document.getElementById("starfield");
+  const numStars = 100;
+
+  for (let i = 0; i < numStars; i++) {
+    let star = document.createElement("div");
+    let size = Math.random() * 3 + 1;
+    let duration = Math.random() * 10 + 5;
+    star.classList.add("star");
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+    star.style.left = `${Math.random() * 100}vw`;
+    star.style.top = `${Math.random() * 100}vh`;
+    star.style.animationDuration = `${duration}s`;
+    starfield.appendChild(star);
+  }
+  // Toggle contact section visibility when button is clicked
+  document.querySelector('.btn-outline').addEventListener('click', function(e) {
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+    contactSection.style.display = contactSection.style.display === 'none' ? 'block' : 'none';
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
+
+ <section id="about" style="background:transparent; color:white; padding:80px 20px; text-align:center; position:relative; overflow:hidden;">
+  <h2 style="font-size:2.5rem; margin-bottom:30px; color:#ffd700;">🌌 My Journey</h2>
+  <div style="max-width:900px; margin:auto; font-size:1.2rem; line-height:1.9; text-align:left;">
+    <p>
+      My journey wasn’t a straight one—it was more of a winding path of self-discovery.  
+      As a child, I marveled at the idea of flying planes, until I realized that life in the skies wasn’t for me.  
+      In secondary school that idea blossomed into a desire to fix planes, fascinated by how things worked behind the scenes.  
+    </p>
+    <p>
+      However as I got older, my curiosity shifted toward understanding how <strong>money and businesses</strong> operate.  
+      That curiosity eventually evolved into a bigger vision: using <strong>AI and data</strong> to drive change, one project at a time.  
+    </p>
+    <p>
+      I pursued this calling through education—earning a <strong>Business Administration degree from Ashesi University</strong>, graduating with second-class honours.  
+      To deepen my technical expertise, I completed a <strong>Master’s in Data Science with Distinction at the University of Essex</strong>.  
+      My penchant for learning also drove me to acquire the <strong>Microsoft Azure Data Science Associate Certification</strong>, further solidifying my foundations in modern data solutions.  
+    </p>
+    <p>
+      Every step of this journey—whether it was airplanes, business, or AI—has shaped my perspective.  
+      It’s taught me adaptability, focus, and the power of curiosity.  
+      Today, I channel that energy into <strong>building solutions with data</strong>, blending creativity and technical skill to make a real impact.  
+    </p>
+  </div>
+
+  <!-- Timeline -->
+  <div style="max-width:700px; margin:60px auto; position:relative;">
+    <div style="position:absolute; left:50%; top:0; bottom:0; width:4px; background:#ffd700; transform:translateX(-50%);"></div>
+
+    <!-- Timeline Item -->
+    <div class="timeline-item" style="margin:40px 0; position:relative; opacity:0; transform:translateY(40px); transition:all 1s ease;">
+      <div style="position:relative; left:50%; transform:translateX(-50%); background:#000; border:3px solid #ffd700; border-radius:50%; width:24px; height:24px;"></div>
+      <div style="margin-left:55%; background:#1a1a1a; padding:20px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.5);">
+        <h4 style="color:#ffd700;">✈️ Childhood Dream</h4>
+        <p>Wanted to fly planes, fascinated by the skies.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item" style="margin:40px 0; position:relative; opacity:0; transform:translateY(40px); transition:all 1s ease;">
+      <div style="position:relative; left:50%; transform:translateX(-50%); background:#000; border:3px solid #ffd700; border-radius:50%; width:24px; height:24px;"></div>
+      <div style="margin-right:55%; background:#1a1a1a; padding:20px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.5); text-align:right;">
+        <h4 style="color:#ffd700;">🔧 Secondary School</h4>
+        <p>Decided to fix planes instead, curious about engineering.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item" style="margin:40px 0; position:relative; opacity:0; transform:translateY(40px); transition:all 1s ease;">
+      <div style="position:relative; left:50%; transform:translateX(-50%); background:#000; border:3px solid #ffd700; border-radius:50%; width:24px; height:24px;"></div>
+      <div style="margin-left:55%; background:#1a1a1a; padding:20px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.5);">
+        <h4 style="color:#ffd700;">🎓 Ashesi University</h4>
+        <p>Graduated with Second-Class Honours in Business Administration.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item" style="margin:40px 0; position:relative; opacity:0; transform:translateY(40px); transition:all 1s ease;">
+      <div style="position:relative; left:50%; transform:translateX(-50%); background:#000; border:3px solid #ffd700; border-radius:50%; width:24px; height:24px;"></div>
+      <div style="margin-right:55%; background:#1a1a1a; padding:20px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.5); text-align:right;">
+        <h4 style="color:#ffd700;">📚 University of Essex</h4>
+        <p>Earned a Master’s in Data Science with Distinction.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item" style="margin:40px 0; position:relative; opacity:0; transform:translateY(40px); transition:all 1s ease;">
+      <div style="position:relative; left:50%; transform:translateX(-50%); background:#000; border:3px solid #ffd700; border-radius:50%; width:24px; height:24px;"></div>
+      <div style="margin-left:55%; background:#1a1a1a; padding:20px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.5);">
+        <h4 style="color:#ffd700;">💡 Certification</h4>
+        <p>Achieved Microsoft Azure Data Science Associate.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item" style="margin:40px 0; position:relative; opacity:0; transform:translateY(40px); transition:all 1s ease;">
+      <div style="position:relative; left:50%; transform:translateX(-50%); background:#ffd700; border-radius:50%; width:24px; height:24px;"></div>
+      <div style="margin-right:55%; background:#1a1a1a; padding:20px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.5); text-align:right;">
+        <h4 style="color:#ffd700;">🚀 Today</h4>
+        <p>Building impactful data solutions, one project at a time.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resume Button -->
+  <div style="margin-top:40px; text-align:center;">
+    <a href="Selorm Haligah CV.pdf" target="_blank" 
+       style="color:#333; background:#ffd700; padding:12px 25px; border-radius:30px; text-decoration:none; font-weight:bold;">📄 Download Resume</a>
+  </div>
+</section>
+
+<section id="skills" style="background:transparent; color:white; padding:80px 20px; text-align:center;">
+  <h2 style="font-size:2.5rem; margin-bottom:40px; color:#ffd700;">🛠 Skills & Tech Stack</h2>
+  <p style="max-width:1000px; margin:auto; font-size:1.15rem; line-height:1.7; margin-bottom:45px;">
+    A blend of <strong>hands-on engineering</strong>, <strong>analytical depth</strong>, and <strong>collaborative practice</strong> — the toolkit I use to turn ideas into production-ready data products.
+  </p>
+
+  <!-- Badge styles -->
+  <style>
+    .badge { display:inline-block; padding:6px 12px; margin:6px 6px 0 0; border-radius:9999px;
+             background:#131313; border:1px solid #2a2a2a; font-size:0.95rem; }
+    .card { background:#1a1a1a; padding:26px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.5); text-align:left; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:26px; max-width:1100px; margin:auto; }
+    .card h3 { color:#ffd700; margin:0 0 12px; font-size:1.2rem; }
+    .card p { margin:6px 0 14px; color:#ddd; }
+  </style>
+
+  <div class="grid">
+
+    <!-- Programming -->
+    <div class="card">
+      <h3>💻 Programming</h3>
+      <span class="badge">Python</span>
+      <span class="badge">R</span>
+      <span class="badge">Pandas</span>
+      <span class="badge">NumPy</span>
+      <span class="badge">Scikit-learn</span>
+      <span class="badge">Matplotlib</span>
+      <span class="badge">Statsmodels</span>
+      <span class="badge">PyMC3</span>
+      <span class="badge">BeautifulSoup</span>
+      <span class="badge">NLTK</span>
+      <span class="badge">Jupyter</span>
+      <span class="badge">MlFlow</span>
+    </div>
+
+    <!-- Analytics & Viz -->
+    <div class="card">
+      <h3>📊 Analytics & Visualization</h3>
+      <span class="badge">Power BI</span>
+      <span class="badge">Tableau</span>
+      <span class="badge">Excel</span>
+      <span class="badge">SQL (MySQL)</span>
+      <span class="badge">SQLite</span>
+      <span class="badge">BigQuery</span>
+    </div>
+
+    <!-- ML / DL / XAI -->
+    <div class="card">
+      <h3>🤖 Machine Learning & XAI</h3>
+      <span class="badge">TensorFlow</span>
+      <span class="badge">Keras</span>
+      <span class="badge">SHAP (Explainability)</span>
+      <span class="badge">OpenAI API</span>
+    </div>
+
+    <!-- Econometrics & Stats -->
+    <div class="card">
+      <h3>📈 Econometrics & Statistical Modeling</h3>
+      <span class="badge">Causal Inference</span>
+      <span class="badge">Demand Systems</span>
+      <span class="badge">Elasticity Estimation</span>
+      <span class="badge">Time Series</span>
+    </div>
+
+    <!-- Experimentation -->
+    <div class="card">
+      <h3>🧪 Experimentation</h3>
+      <span class="badge">A/B Testing</span>
+      <span class="badge">DOE</span>
+      <span class="badge">Forecasting</span>
+    </div>
+
+    <!-- Platforms & Version Control (NEW) -->
+    <div class="card">
+      <h3>⚙️ Platforms & Version Control</h3>
+      <span class="badge">Streamlit</span>
+      <span class="badge">Streamlit Cloud</span>
+      <span class="badge">Google Colab</span>
+      <span class="badge">Git</span>
+      <span class="badge">GitHub</span>
+      <span class="badge">Azure (Data Science Associate)</span>
+    </div>
+
+    <!-- Soft skills -->
+    <div class="card">
+      <h3>🤝 Soft Skills</h3>
+      <span class="badge">Collaboration</span>
+      <span class="badge">Communication</span>
+      <span class="badge">Agile</span>
+      <span class="badge">Time Management</span>
+      <span class="badge">Creative Problem Solving</span>
+      <span class="badge">Continuous Learning</span>
+    </div>
+
+  </div>
+</section>
+
+<section id="blog" style="background:transparent; color:white; padding:80px 20px; text-align:center;">
+  <h2 style="font-size:2.5rem; margin-bottom:40px; color:#ffd700;">📝 My Blog</h2>
+  <p style="max-width:800px; margin:auto; font-size:1.2rem; line-height:1.6; margin-bottom:40px;">
+    I regularly share insights on <strong>data science, AI, and analytics</strong> on Medium.  
+    Check out my latest posts and join me as I explore how data shapes the world.
+  </p>
+
+  <a href="https://medium.com/@Selorm" target="_blank" 
+     style="color:#333; background:#ffd700; padding:12px 25px; border-radius:30px; text-decoration:none; font-weight:bold;">
+     🔗 Visit My Blog
+  </a>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" style="background:transparent; color:white; padding:80px 20px; text-align:center;">
+  <h2 style="font-size:2.5rem; margin-bottom:40px; color:#ffd700;">📬 Let’s Talk</h2>
+  <p style="max-width:700px; margin:auto; font-size:1.2rem; line-height:1.6; margin-bottom:40px;">
+    Whether you want to collaborate, discuss opportunities, or just say hello — feel free to reach out.
+  </p>
+
+  <!-- Contact Links -->
+  <div style="margin-bottom:50px;">
+    <a href="mailto:se.haligah@gmail.com" 
+       style="color:#ffd700; margin:0 15px; font-size:1.2rem; text-decoration:none;">📧 Email</a>
+    <a href="https://www.linkedin.com/in/selorm-haligah" target="_blank" 
+       style="color:#ffd700; margin:0 15px; font-size:1.2rem; text-decoration:none;">💼 LinkedIn</a>
+    <a href="tel:+233 552369697" 
+       style="color:#ffd700; margin:0 15px; font-size:1.2rem; text-decoration:none;">📞 Call Me</a>
+  </div>
+
+  <!-- Optional Contact Form -->
+  <form action="https://formspree.io/f/xvgqjzqw" method="POST" 
+        style="max-width:600px; margin:auto; display:flex; flex-direction:column; gap:15px;">
+    <input type="text" name="name" placeholder="Your Name" required 
+           style="padding:12px; border-radius:8px; border:none;"/>
+    <input type="email" name="email" placeholder="Your Email" required 
+           style="padding:12px; border-radius:8px; border:none;"/>
+    <textarea name="message" rows="5" placeholder="Your Message" required 
+              style="padding:12px; border-radius:8px; border:none;"></textarea>
+    <button type="submit" 
+            style="background:#ffd700; color:#111; font-weight:bold; padding:12px; border:none; border-radius:8px; cursor:pointer;">
+      🚀 Send Message
+    </button>
+  </form>
+</section>
+
+
+<script>
+  // Animate timeline items on scroll
+  const timelineItems = document.querySelectorAll(".timeline-item");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = "1";
+        entry.target.style.transform = "translateY(0)";
+        observer.unobserve(entry.target); // animate once
+      }
+    });
+  }, { threshold: 0.2 });
+
+  timelineItems.forEach(item => {
+    observer.observe(item);
+  });
+</script>
+
